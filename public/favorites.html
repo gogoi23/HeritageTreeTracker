@@ -1,0 +1,116 @@
+<!--
+Favorites HTML for webpage
+Data2 team, Section B
+CS 341 
+Author: Caitlin Ching
+-->
+
+<!--css files and jquery library-->
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/favorites.css"/>
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/mainPage.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="/javascripts/favorites.js"> </script>
+    </head>
+</head>
+
+<h1>FAVORITE TREES</h1>
+
+<br> <br>
+
+<!--button takes you back to main page-->
+<a HREF="index.html" id="backButton">Main Page</a>
+
+<!--table to separate side bar and favored trees-->
+<table>
+    <td VALIGN=TOP>
+        <table class="menu">
+            <td id="menu" >
+                    <!--Temp Icon-->
+                    <img id="icon" src="https://cdn-icons-png.flaticon.com/512/3039/3039872.png" 
+                    width="150" height="150"> 
+                    <br>
+                    <a id="loginButton">Login</a>
+                    <br>
+                    <a HREF="map.html" id="mapButton">Map</a>
+                    <br>
+                    <!--Star Icon-->
+                    <a HREF="favorites.html" id="favoritesButton">Favorites</a>
+                    <br>
+                    <a HREF="visited.html" id="VisitedButton">Visited</a>
+                    <script src="javascripts/filterMenu.js"></script>
+                    <br>
+                    <a HREF="data.html" id="DataButton">Data</a>
+                    <br>
+                    <a HREF="info.html" id="InfoButton">Info</a>
+            </td>
+        </table>
+    </td>
+    <td>
+        <!--table for favored trees-->
+        <table>
+            <!--adding favored trees-->
+            <tr>
+                <td>
+                    <!--favored tree icon-->
+                    <img id="icon" src="https://www.iconpacks.net/icons/2/free-leaves-icon-1571-thumb.png" 
+                    width="150" height="150">
+                </td>
+                
+                <!--favored tree information (scientific name, address, etc.)-->
+                <td>
+                    <b>American Elm</b> 
+                    <p>Scientific Name: Ulmus americana</p>
+                    <p>Site Address: 1111 SW 10th AVE</p>
+                    <p>Year Designated: 1973</p>
+                    <p>Height: 85ft, Diameter: 107ft, Spread: 48ft</p>
+                    <td>
+                        <!--favored star icon-->
+                        <div class="faveButton">
+                            <input type= "radio" class= "favorite" id= "americana" checked/>
+                            <label for="americana"></label>
+                        </div>
+                    </td>
+                </td>   
+            </tr>
+            <tr>
+                <td>
+                    <img id="icon" src="https://www.iconpacks.net/icons/2/free-leaves-icon-1571-thumb.png" 
+                    width="150" height="150">
+                </td>
+                <td>
+                    <b>London Planetree</b> 
+                    <p>Scientific Name: Platanus x acerifolia</p>
+                    <p>Site Address: NW/C SW PARK & SW MAIN ST</p>
+                    <p>Year Designated: 1975</p>
+                    <p>Height: 63ft, Diameter: 95ft, Spread: 54ft</p>
+                    <td>
+                        <div class="faveButton">
+                            <input type="radio" class= "favorite" id="planetree" checked/>
+                            <label for="planetree"></label>
+                        </div>
+                    </td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="icon" src="https://www.iconpacks.net/icons/2/free-leaves-icon-1571-thumb.png" 
+                    width="150" height="150">
+                </td>
+                <td>
+                    <b>Tulip Tree</b> 
+                    <p>Scientific Name: Liriodendron tulipifera</p>
+                    <p>Site Address: 1403 NE WEIDLER ST</p>
+                    <p>Year Designated: 1993</p>
+                    <p>Height: 74ft, Diameter: 61ft, Spread: 60ft</p>
+                    <td>
+                        <div class="faveButton">
+                            <input type="radio" class= "favorite" id="tulipifera" checked/>
+                            <label for="tulipifera"></label>
+                        </div>
+                    </td>
+                </td>
+            </tr>
+        </table>
+    </td>
+</table>

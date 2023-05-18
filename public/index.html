@@ -1,0 +1,119 @@
+<!--
+Main HTML for webpage
+Data2 team, Section B
+CS 341 
+Authors: Caitlin Ching and Emily Hoppe
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/mainPage.css"/>
+
+    <script 
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/> 
+    </script>
+    <script 
+        type="module"
+        src = "javascripts/LoginButton.js">  
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="javascripts/main.js"> </script>
+
+</head>
+
+<body>
+  
+  <h7 id = "currentUser"></h7>  
+  <!--Main Page Header-->
+  <h1> Heritage Trees</h1>
+  <!--Menu on left side-->
+  <table class="menu">
+      <td id="menu" >
+        <!--Temp Icon-->
+        <img id="icon" src="https://cdn-icons-png.flaticon.com/512/3039/3039872.png" width="150" height="150"> 
+        <br>
+        <a id="loginButton">Login</a>
+        <br>
+        <a HREF="map.html" id="mapButton">Map</a>
+        <br>
+        <a HREF="visited.html" id="VisitedButton">Visited</a>
+        <br>
+        <a HREF="data.html" id="dataButton">Data</a>
+        <br>
+        <a HREF="info.html" id="InfoButton">Info</a>
+        <script src="javascripts/filterMenu.js"></script>
+      </td>
+
+      <!-- Adding sliding picture slideshow -->
+      <!-- tried moving js files to js folder, but wouldn't work, so im leaving them here for now -->
+      <td id = "slideShow" style="margin: 0px auto;">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="https://www.nwtree.com/wp/wp-content/uploads/2016/07/corbett-oak.jpg" height= 550 width= 900>
+              <div class="text">Corbett Oak at Heritage Tree Park</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="https://www.nwtree.com/wp/wp-content/uploads/2016/07/chinese-garden-portland.jpg" height= 550 width= 900>
+              <div class="text">Osmanthus in the Chinese Garden</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="https://media.oregonlive.com/hg_impact/photo/11403607-large.jpg" height= 550 width= 900>
+              <div class="text">Hager Grove Pear</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="https://paulgerald.com/wp-content/uploads/2014/06/portland-heritage-tree-1-american-elm-downtown-ywca-11.jpg" 
+              height= 550 width= 900>
+              <div class="text">American Elm, Downtown</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="https://paulgerald.com/wp-content/uploads/2014/06/portland-heritage-tree-1-american-elm-downtown-ywca-07.jpg" 
+              height= 550 width= 900>
+              <div class="text">American Elm on SW 10th Ave</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="https://paulgerald.com/wp-content/uploads/2014/06/portland-heritage-tree-1-american-elm-downtown-ywca-02.jpg
+              " height= 550 width= 900>
+              <div class="text">Burrell Elm</div>
+            </div>
+          </div>
+      </td>
+
+      <td id="sidebar" VALIGN=TOP>
+        <h3>How to get started:</h3>
+        <p>Click LOGIN to login to your account or sign up for a new account</p>
+        <p>Click MAP on the left sidebar to access the map</p>
+        <p>Click FAVORITES on the left sidebar to access your favorite heritage trees</p>
+        <p>Click VISITED on the left sidebar to access heritage trees you have visited</p>
+        <p>Click DATA on the left sidebar to access data on Portland's heritage trees</p>
+        <p>Click INFO on the left sidebar to access additional information about the website and Portland's heritage trees</p>
+      </td>
+  </table>
+</body>
+
+<br>
+<div id= "ad" style="text-align:center">
+  <img src="https://ascentiumcapital.com/images/default-source/Blog/blog-header-11-dos-and-donts-digital-design.jpg?sfvrsn=b0e6dc25_0" height= 90 width= 700 class="center">
+</div>
+
+<body>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for(i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if(slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+  </script>
+</body>
+
+</html>

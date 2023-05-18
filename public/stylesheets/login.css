@@ -1,0 +1,67 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-image : url('bOvf94dPRxWu0u3QsPjF_tree.jpeg') ;
+    background-size : cover
+}
+
+.main{
+    width:350px;
+    padding: 35px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: rgb(137, 167, 128);
+    
+    text-align:center;
+    border-radius: 24px;
+}
+
+.main h1{
+    color: black;
+    text-transform: uppercase;
+    font-weight:600;
+}
+
+.main input[type = "text"],.main input[type = "password"]{
+    border: 0;
+    
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    
+    padding: 14px 10px;
+    width:220px;
+    outline: none;
+    color: black;
+    border-radius: 8px;
+    transition:0.25px; 
+    opacity: 1;
+}
+
+.main input[type = "text"]:focus,.main input[type = "password"]:focus{
+    width:270px;
+}
+
+.main input[type = submit], .main input[type = "button"]{
+    background-color: #89a780;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    
+
+}
+
+#hyperlink{
+    position:relative; 
+    top:10px;
+    color: green;
+}
+
+.parameters{
+    color:green;
+    
+}
+

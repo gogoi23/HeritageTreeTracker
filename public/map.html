@@ -1,0 +1,154 @@
+<!-- 
+    Map Interface 
+    Data2 team, Section B
+    CS 341 
+    Emily Hoppe
+-->
+
+<!DOCTYPE html>
+
+<!--<a HREF="index.html" id="backButton">Main Page</a>-->
+
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheets/mapStyle.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+  </script>
+  <script src="javascripts/fullMap.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a HREF="index.html" id="backButton">Home</a>
+    
+    <div class="dropdown">
+      <button class="dropbtn">Designation Filters
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content"> <!--Designation-->
+        <input type="checkbox" id="desig1" name="filt" class="filt" value="1995">
+        <label for="desig1">Before 1996</label><br>
+        <input type="checkbox" id="desig2" name="filt" class="filt" value="1996">
+        <label for="desig2">1996 - 2005</label><br>
+        <input type="checkbox" id="desig3" name="filt" class="filt" value="2006">
+        <label for="desig3">2006 - Present</label><br>
+      </div>
+    </div> 
+    <div class="dropdown">
+      <button class="dropbtn">Ownership Filters
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content"> <!--Ownership-->
+        <input type="checkbox" id="own1" name="filt" class="filt" value="public">
+        <label for="own1">Public</label><br>
+        <input type="checkbox" id="own2" name="filt" class="filt" value="row">
+        <label for="own2">Right Of Way</label><br>
+        <input type="checkbox" id="own3" name="filt" class="filt" value="park">
+        <label for="own3">Park</label><br>
+        <input type="checkbox" id="own4" name="filt" class="filt" value="private">
+        <label for="own4">Private</label><br>
+        <input type="checkbox" id="own5" name="filt" class="filt" value="othero">
+        <label for="own5">Other</label><br>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Species Filters
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content"> <!--Species-->
+        <input type="checkbox" id="spec1" name="filt" class="filt" value="cedar">
+        <label for="spec1">Cedar</label><br>
+        <input type="checkbox" id="spec2" name="filt" class="filt" value="cherry">
+        <label for="spec2">Cherry</label><br>
+        <input type="checkbox" id="spec3" name="filt" class="filt" value="chestnut">
+        <label for="spec3">Chestnut</label><br>
+        <input type="checkbox" id="spec4" name="filt" class="filt" value="elm">
+        <label for="spec4">Elm</label><br>
+        <input type="checkbox" id="spec5" name="filt" class="filt" value="fir">
+        <label for="spec5">Fir</label><br>
+        <input type="checkbox" id="spec6" name="filt" class="filt" value="magnolia">
+        <label for="spec6">Magnolia</label><br>
+        <input type="checkbox" id="spec7" name="filt" class="filt" value="maple">
+        <label for="spec7">Maple</label><br>
+        <input type="checkbox" id="spec8" name="filt" class="filt" value="oak">
+        <label for="spec8">Oak</label><br>
+        <input type="checkbox" id="spec9" name="filt" class="filt" value="pine">
+        <label for="spec9">Pine</label><br>
+        <input type="checkbox" id="spec10" name="filt" class="filt" value="redwood">
+        <label for="spec10">Redwood</label><br>
+        <input type="checkbox" id="spec11" name="filt" class="filt" value="sequoia">
+        <label for="spec11">Sequoia</label><br>
+        <input type="checkbox" id="spec12" name="filt" class="filt" value="others">
+        <label for="spec12">Other</label><br>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Neighborhood Filters
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content"> <!--Neighborhood-->
+        <input type="checkbox" id="nei1" name="filt" class="filt" value="n">
+        <label for="nei1">North</label><br>
+        <input type="checkbox" id="nei2" name="filt" class="filt" value="nw">
+        <label for="nei2">North West</label><br>
+        <input type="checkbox" id="nei3" name="filt" class="filt" value="ne">
+        <label for="nei3">North East</label><br>
+        <input type="checkbox" id="nei4" name="filt" class="filt" value="c">
+        <label for="nei4">Central</label><br>
+        <input type="checkbox" id="nei5" name="filt" class="filt" value="s">
+        <label for="nei5">South</label><br>
+        <input type="checkbox" id="nei6" name="filt" class="filt" value="sw">
+        <label for="nei6">South West</label><br>
+        <input type="checkbox" id="nei7" name="filt" class="filt" value="se">
+        <label for="nei7">South East</label><br>
+        <input type="checkbox" id="nei8" name="filt" class="filt" value="e">
+        <label for="nei8">East</label><br>
+      </div>
+    </div> 
+      <div class="dropdown">
+      <button class="dropbtn" id="redrawBtn">Redraw
+        <i class="fa fa-caret-down"></i>
+      </button> 
+      <script> //script for retrieving filters
+        const btn = document.querySelector('#redrawBtn');
+        btn.addEventListener('click', (event) => {
+          let checkboxes = document.querySelectorAll('input[name="filt"]:checked');
+          let values = [];
+          checkboxes.forEach((checkbox) => {
+                values.push(checkbox.value);
+            });
+          redrawMap(values);
+        });
+      </script>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn" id="clear">Clear Filters
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <script>
+      const clearbtn = document.querySelector('#clear');
+      clearbtn.addEventListener('click', (event) => {
+        $('input[type=checkbox]').prop('checked',false);
+        redrawMap([]);
+      });
+    </script>
+    </div>
+  </div>
+  <!--<div id="filterMenu">
+    <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <p>Link 1</p>
+      </div>
+  </div>-->
+  <!--The div element for the map -->
+  <div id="map"></div>
+  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMjOB6N0yxy8e-Se-lhw8A47ipGWTCs2o&callback=initMap&libraries=&v=weekly"
+    async>
+  </script>
+
+</body>
+
+</html>

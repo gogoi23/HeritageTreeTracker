@@ -1,0 +1,57 @@
+h1 {
+    font-size: 50px;
+    text-align: center;
+    background-color: #89a780;
+}
+h3 {
+    background-color: #9783a0;
+    font-size: 25px;
+}
+body {
+    background: #f0f8ff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+b {
+    font-size: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    }
+    .visitedT {
+        float: left;
+        height: 46px;
+        padding: 0 10px;
+    }
+    .visitedT:not(:checked) > input {
+        position:absolute;
+        top:-9999px;
+    }
+    .faveBvisitedTutton:not(:checked) > label {
+        float:right;
+        width:1em;
+        overflow:hidden;
+        white-space:nowrap;
+        cursor:pointer;
+        font-size:30px;
+        color:rgb(255, 255, 255);
+    }
+    .visitedT:not(:checked) > label:before {
+        content: 'X';
+    }
+    .visitedT > input:checked ~ label {
+        color: #ec3030;    
+    }
+    .visitedT:not(:checked) > label:hover,
+    .faveBuvisitedTtton:not(:checked) > label:hover ~ label {
+        color: #de1717;  
+    }
+    .visitedT > input:checked + label:hover,
+    .visitedT > input:checked + label:hover ~ label,
+    .visitedT > input:checked ~ label:hover,
+    .visitedT > input:checked ~ label:hover ~ label,
+    .visitedT > label:hover ~ input:checked ~ label {
+        color: #ac0000;
+    }

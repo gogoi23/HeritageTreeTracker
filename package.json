@@ -1,0 +1,28 @@
+{
+  "name": "herritagetreetracker",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "async": "^3.2.3",
+    "bcrypt": "^5.0.1",
+    "cars": "^1.1.6",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "firebase": "^9.6.8",
+    "http-errors": "~1.6.3",
+    "jade": "^0.29.0",
+    "jquery": "^3.6.0",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "cypress": "^9.5.2",
+    "jest": "^27.5.1"
+  }
+}

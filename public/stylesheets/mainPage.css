@@ -1,0 +1,255 @@
+/*
+CSS for main HTML page
+Data2 team, Section B
+CS 341 
+Authors: Caitlin Ching and Emily Hoppe
+*/
+
+body {
+    background: #f0f8ff;;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+  font-size: 50px;
+    text-align: center;
+    background-color: #89a780;
+}
+
+/*
+.checkbox-dropdown {
+    width: 200px;
+    border: 1px solid #aaa;
+    padding: 10px;
+    position: relative;
+    margin: 0 auto;
+    
+    user-select: none;
+} */
+
+/* Display CSS arrow to the right of the dropdown text */
+/*.checkbox-dropdown:after {
+    content:'';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 6px solid transparent;
+    border-top-color: #000;
+    top: 50%;
+    right: 10px;
+    margin-top: -3px;
+} */
+
+/* Reverse the CSS arrow when the dropdown is active */
+/*.checkbox-dropdown.is-active:after {
+    border-bottom-color: #000;
+    border-top-color: #fff;
+    margin-top: -9px;
+} */
+
+
+.checkbox-dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%; /* align the dropdown right below the dropdown text */
+    border: inherit;
+    border-top: none;
+    left: -1px; /* align the dropdown to the left */
+    right: -1px; /* align the dropdown to the right */
+    opacity: 0; /* hide the dropdown */
+   
+    transition: opacity 0.4s ease-in-out;
+    height: 100px;
+    overflow: scroll;
+    overflow-x: hidden;
+    pointer-events: none; /* avoid mouse click events inside the dropdown */
+}
+.is-active .checkbox-dropdown-list {
+    opacity: 1; /* display the dropdown */
+    pointer-events: auto; /* make sure that the user still can select checkboxes */
+}
+
+.checkbox-dropdown-list li label {
+    display: block;
+    /* border-bottom: 1px solid silver; */
+    /* padding: 10px; */
+    transition: all 0.2s ease-out;
+}
+
+.checkbox-dropdown-list li label:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+#menu {
+    background-color: #04AA6D;
+    overflow: hidden;
+    height: 100%;
+    
+  }
+
+  #sidebar {
+    background-color: #b6b6b6;
+    overflow: hidden;
+    
+  }
+
+.menu li, .menu a, .menu div {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 30px;
+    border: inherit;
+    text-align: center;
+    display: block;
+}
+
+#icon {
+    border: inherit; 
+    padding-bottom: 10px;
+}
+
+
+
+
+
+/* Change the color of links on hover */
+.menu a:hover, .menu div:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+
+/* Add a color to the active/current link */
+.menu a.active {
+    background-color: #161817;
+    color: white;
+  }
+
+.topnav {
+  overflow: hidden;
+  background-color: #ece1ce;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 17px 17px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #555;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ece1ce;
+}
+
+
+
+/* Slide Show */
+* {
+  box-sizing: border-box
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #999999;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: #111111;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+}

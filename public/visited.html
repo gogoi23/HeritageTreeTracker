@@ -1,0 +1,64 @@
+<!--
+Visited HTML for webpage
+Data2 team, Section B
+CS 341 
+Author: Caitlin Ching, Dylan Kramis (Achievements)
+Version: 3/27/2022
+-->
+
+<!--css files and jquery library-->
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/visited.css"/>
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/mainPage.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="/javascripts/visited.js"> </script>
+    <script 
+        type="module"
+        src = "javascripts/LoginButton.js">  
+    </script>
+</head>
+
+<h7 id = "currentUser"></h7>  
+
+<h1>VISITED TREES</h1>
+
+<!--table to separate sidebar and visited trees-->
+<table>
+    <td VALIGN="TOP">
+        <br> <br>
+            <table class="menu">
+                <td id="menu" >
+                        <!--Temp Icon-->
+                        <a href="index.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3039/3039872.png"
+                            width="150" height="150">
+                        </a> 
+                        <br>
+                        <a id="loginButton">Login</a>
+                        <br>
+                        <a HREF="index.html" id="backButton">Main Page</a>
+                        <br>
+                        <a HREF="map.html" id="mapButton">Map</a>
+                        <br>
+                        <a HREF="visited.html" id="VisitedButton">Visited</a>
+                        <script src="javascripts/filterMenu.js"></script>
+                        <br>
+                        <a HREF="data.html" id="DataButton">Data</a>
+                        <br>
+                        <a HREF="info.html" id="InfoButton">Info</a>
+                </td>
+            </table>
+        <td> <br>
+
+        <h2 id="noVisitedMessage"></h2>
+        <!--table for visited trees-->
+        <table id="treesVisited">
+              
+        </table>
+    </td>
+</table>
+
+<br>
+<div id= "ad" style="text-align:center">
+  <img src="https://ascentiumcapital.com/images/default-source/Blog/blog-header-11-dos-and-donts-digital-design.jpg?sfvrsn=b0e6dc25_0" height= 90 width= 700 class="center">
+</div>

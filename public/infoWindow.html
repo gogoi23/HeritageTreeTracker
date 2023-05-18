@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+
+<!-- <html id="infoWindowHTML">
+<h1 id="firstHeading" class="firstHeading">American Elm</h1>
+<p>Tree ID: 1</p>
+</html> -->
+
+<body style="font-family: Arial, sans-serif">
+  <h1 style="font-weight: bold">American Elm</h1>
+  <style>
+    .left {
+      width: 35%;
+      float: left;
+    }
+
+    .right {
+      width: 65%;
+      float: right;
+    }
+
+    .clear-fix {
+      clear: both;
+    }
+
+    table {
+      display: table;
+      border-collapse: collapse;
+    }
+
+    table tr {
+      display: table-cell;
+    }
+
+    table tr td {
+      display: block;
+      padding-top: 7px;
+    }
+
+    .left1 {
+      padding-right: 10px;
+    }
+    .button {
+      display: inline-block;
+      border: none;
+      color: white;
+      background-color: #4CAF50;
+      text-align: center;
+      padding: 12px 23px;
+    }
+    .button:active {
+      background-color: #3e8e41;
+    }
+
+    .disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  </style>
+
+  <table>
+    <tr>
+      <td><b>ID:</b> 1</td>
+      <td><b>Height:</b> 85 ft</td>
+      <td><b>Spread:</b> 107 ft</td>
+      <td><b>Diameter:</b> 48 ft</td>
+    </tr>
+    <tr>
+      <td><b>Scientific Name:</b> <i>Ulmus Americana</i></td>
+      <td><b>Site Address:</b> 1111 SW 10th Ave</td>
+      <td><b>Neighborhood:</b> Downtown</td>
+      <td><b>Year Designated:</b> 1973</td>
+    </tr>
+  </table>
+  <br>
+  <div>
+    <strong>Notes:</strong>
+    <p>
+      No notes.
+    </p>
+  </div>
+  <p><b>Ownership:</b> Private</p>
+  </div>
+  <button class="button" id="visitBtn" onclick="addVisited()" >Add to Visited</button>
+  <script>
+    function addVisited(){
+      document.getElementById("visitBtn").className = "button disabled";
+      document.getElementById("visitBtn").innerHTML = "Visited"; 
+    }
+  </script>
+</body>

@@ -1,0 +1,52 @@
+h1 {
+    font-size: 50px;
+    text-align: center;
+    background-color: #89a780;
+}
+body {
+    background: #f0f8ff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+b {
+    font-size: 20px;
+}
+*{
+margin: 0;
+padding: 0;
+}
+.faveButton {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.faveButton:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.faveButton:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:rgb(255, 255, 255);
+}
+.faveButton:not(:checked) > label:before {
+    content: '*';
+}
+.faveButton > input:checked ~ label {
+    color: #ffc700;    
+}
+.faveButton:not(:checked) > label:hover,
+.faveButton:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.faveButton > input:checked + label:hover,
+.faveButton > input:checked + label:hover ~ label,
+.faveButton > input:checked ~ label:hover,
+.faveButton > input:checked ~ label:hover ~ label,
+.faveButton > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

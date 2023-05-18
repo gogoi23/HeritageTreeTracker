@@ -1,0 +1,159 @@
+<!--
+Data HTML for webpage
+Data2 team, Section B
+CS 341 
+Author: Caitlin Ching
+-->
+
+<!-- External source used: https://developers.google.com/chart/interactive/docs/basic_multiple_charts-->
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/mainPage.css"/>
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/data.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="javascripts/data.js"></script>
+    <script 
+        type="module"
+        src = "javascripts/LoginButton.js">  
+    </script>
+</head>
+
+<h7 id = "currentUser"></h7>  
+<h1>Tree Data</h1>
+
+<!--Menu on left side-->
+<table>
+    <td VALIGN=TOP>
+        <table class="menu">
+            <td id="menu" >
+                <a href="index.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3039/3039872.png"
+                    width="150" height="150">
+                </a>
+                <br>
+                <a id="loginButton">Login</a>
+                <br>
+                <a HREF="index.html" id="backButton">Main Page</a>
+                <br>
+                <a HREF="map.html" id="mapButton">Map</a>
+                <br>
+                <a HREF="visited.html" id="VisitedButton">Visited</a>
+                <script src="javascripts/filterMenu.js"></script>
+                <br>
+                <a HREF="data.html" id="DataButton">Data</a>
+                <br>
+                <a HREF="info.html" id="InfoButton">Info</a>
+            </td>
+        </table>
+    </td>
+    <td>
+        <body>
+            <div id="piechart"></div>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+            // Load google charts
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawSpeciesChart);
+            google.charts.setOnLoadCallback(drawAgeChart);
+            google.charts.setOnLoadCallback(drawOwnerChart);
+            google.charts.setOnLoadCallback(drawNeighborhoodChart);
+            </script>
+            <table class="columns">
+                <table>
+                    <tr>
+                        <td><div id="species_chart" style="border: 1px solid #ccc"></div></td>
+                        <td><div id="owner_chart" style="border: 1px solid #ccc"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div id="neighborhood_chart" style="border: 1px solid #ccc"></div></td>
+                        <td><div id="age_chart" style="border: 1px solid #ccc"></div></td>
+                    </tr>
+                </table>
+            </table>
+        </body>
+    </td>
+</table>
+
+
+<!--Info from database provided-->
+<h2>FUN FACTS</h2>
+<h3>London Plantree</h3>
+<p>
+    The London Planetree [on NW/C SW PARK & SW MAIN ST] was planted by Sylvester
+    Farrell in the planting strip in front of his house,
+    as determined by historic photos of the home that
+    show the newly planted tree. This tree has seen
+    its surroundings change several times over the
+    course of its life. Today, the lot is being used as a
+    parking lot. London planetrees are notable for
+    : their resilience to the stressors of the urban
+    environment and their longevity. This heritage
+    tree may well see the land around it continue to
+    change as the city continues to grow and
+    develop.
+</p> <br>
+
+<h3>Beech Tree</h3>
+<p>
+    The beech tree [on 10115 NE THOMPSON ST] was brought to its current location as a
+    seedling all the way from Missouri in the early 20th century
+    and planted by a Mrs. Moore in what is now the Parkrose
+    Heights neighborhood of Portland. Neighbors petitioned
+    Multnomah County to remove the tree in 1977, but their
+    request was denied. Parkrose Heights was an affluent
+    municipality outside of Portland proper until it was annexed
+    by the City in 1983. Annexation brought about changes in
+    land-use from farms to apartment blocks and higher taxes.
+    Parkrose Heights is one of the most diverse neighborhoods
+    in Portland as a result of having a high population of
+    immigrants and those displaced by the gentrification of
+    close-in neighborhoods.
+</p> <br>
+
+<h3>White Oak</h3>
+<p>
+    The germination of this heritage Oregon white oak [on 1310-1338 NW 23RD AVE] is thought to
+    predate the establishment of Portland as a city by white settlers in
+    1843. Oak savannah was the dominant habitat of the Willamette
+    Valley, and it is possible that this white oak is a remnant of the
+    balanced management practices carried out by indigenous
+    Chinookan people on a large scale across the Willamette Valley.
+    Controlled burns were used to maintain oak savannah for
+    promoting growth of food staples such as camas, berries, and
+    acorns and minimizing competition of conifers and shrubs that
+    would compete with Oregon white oaks. Fires shocked oaks into
+    producing mast crops of acorns, which would be preserved and
+    used for food and trade. Today, this oak is adjacent to the
+    sidewalk in NW Portland along a busy thoroughfare lined with
+    shops and restaurants, still thriving in the city grew around it.
+</p> <br>
+
+<h3>American (Burrell) Elm</h3>
+<p>
+    The Burrell Elm [1111 SW 10th AVE] is the second historic tree
+    recognized by the City of Portland. It is an
+    American Elm tree that was planted in 1870 at
+    the home of Martin and Rosetta Burrell, in what
+    was their private garden at the time. As Portland
+    grew, the character of the neighborhood
+    changed from private single-family homes to
+    denser development. This elm tree is now
+    behind the sidewalk in front of the YWCA in
+    downtown Portland.
+</p> <br>
+
+<h3>Tulip Tree</h3>
+<p>
+    George Nicolai built a house on this lot for his
+    new wife and planted the tulip tree [on 1403 NE WEIDLER ST] after
+    construction was completed, in the late 1880s.
+    The use of this lot has changed over the
+    decades since the tree was planted, resulting in
+    some construction damage to the roots.
+    However, this tree thrives along busy NE 15th
+    Ave.
+</p>
+
+<br>
+<div id= "ad" style="text-align:center">
+  <img src="https://ascentiumcapital.com/images/default-source/Blog/blog-header-11-dos-and-donts-digital-design.jpg?sfvrsn=b0e6dc25_0" height= 90 width= 700 class="center">
+</div>

@@ -1,0 +1,91 @@
+<!--
+Info HTML for webpage
+Data2 team, Section B
+CS 341 
+Author: Caitlin Ching
+-->
+
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/mainPage.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/> </script>
+    <script 
+        type="module"
+        src = "javascripts/LoginButton.js">  
+    </script>
+</head>
+
+<h7 id = "currentUser"></h7>  
+
+<h1>INFORMATION PAGE</h1>
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/info.css"/>
+</head>
+
+<!--table to separate sidebar and information-->
+<table>
+    <td VALIGN=TOP>
+        <!--Menu on left side-->
+        <table class="menu">
+            <td id="menu" >
+                <!--Temp Icon-->
+                <a href="index.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3039/3039872.png"
+                    width="150" height="150">
+                </a>                
+                <br>
+                <a id="loginButton">Login</a>
+                <br>
+                <a HREF="index.html" id="backButton">Main Page</a>
+                <br>
+                <a HREF="map.html" id="mapButton">Map</a>
+                <br>
+                <a HREF="visited.html" id="VisitedButton">Visited</a>
+                <script src="javascripts/filterMenu.js"></script>
+                <br>
+                <a HREF="data.html" id="DataButton">Data</a>
+                <br>
+                <a HREF="info.html" id="InfoButton">Info</a>
+            </td>
+        </table>
+    </td>
+    <!--additional informaiton-->
+    <td>
+        <br>
+        <!--frequently asked questions by users-->
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <h3>How are trees added/recognized as heritage trees?</h3>
+        <p>Trees are formally recognized as heritage trees by the City Council for their unique size, age, 
+            hsitorical or horticultural significance. Once accepted by Council, Heritage Trees are designated 
+            with a small plaque so they can be identified by the public and listed in the Heritage Tree database.</p>
+        <h3>What is the oldest heritage tree?</h3>
+        <p>The oldest heritage tree is the American elm, also known as the Ulmus americana, 
+            which was designated as a heritage tree in 1973.</p>
+        <h3>Where can I access my account?</h3>
+        <p>Users can access their accounts by clickin the login button on the left tab of their screen.</p>
+        <h3>How do I get achievements?</h3>
+        <p>Users gain achievements by visiting trees. The more trees the user visits, the more achievemnts gained.</p>
+        <h3>How can I find heritage trees?</h3>
+        <p>Users can find heritage trees by going to the map page, then hovering their mouse (if on pc) over the 
+            tree icons. The icons will provide a pop up with some information about that specific heritage tree. </p>
+        <h3>How do I find specific heritage trees?</h3>
+        <p>Users find specific heritage trees by using the filters feature on the top of the map page. Hover over the filters
+            menu and select the filter that you want to sort the heritage trees by. Then click the Redraw button to the right of
+            the filters menu to redraw the map based on that specific filter. To clear the selected filters, click the 
+            Clear Filters button on the bottom left of the map page. </p>
+        
+        <!--information about the developers-->
+        <h2>ABOUT THE DEVELOPERS</h2>
+        <p>The website is created by a group of students in the CS341 Software Engineering 
+            class at the University of Portland.</p>
+        <p>Team Members: Anand Gogoi, Cian Murray, Caitlin Ching, Emily Hoppe, Dylan Kramis (previous)</p>
+        
+        <!--the data source used-->
+        <h2>DATA SOURCE</h2>
+        <p>Open Data Source Used: https://gis-pdx.opendata.arcgis.com/datasets/heritage-trees/explore</p>
+    </td>
+</table>
+
+<br>
+<div id= "ad" style="text-align:center">
+  <img src="https://ascentiumcapital.com/images/default-source/Blog/blog-header-11-dos-and-donts-digital-design.jpg?sfvrsn=b0e6dc25_0" height= 90 width= 700 class="center">
+</div>
